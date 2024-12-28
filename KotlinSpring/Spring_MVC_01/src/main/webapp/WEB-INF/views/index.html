@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Index</h1>
+<hr/>
+<form action="/Spring_MVC_01/user" method="post">
+    用户名:
+    <label>
+        <input type="text" name="userName">
+    </label>
+    密码:
+    <label>
+        <input type="password" name="passWord">
+    </label>
+    <input type="submit" value="提交">
+</form>
+<hr/>
+<a href="/Spring_MVC_01/downloadImage">下载图片</a>
+<hr/>
+<form action="/Spring_MVC_01/upload" method="post" enctype="multipart/form-data">
+    文件: <input type="file" name="upload_file"/> <br/>
+    <input type="submit" value="上传文件"/>
+</form>
+</body>
+</html>

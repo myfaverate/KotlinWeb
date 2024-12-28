@@ -1,0 +1,26 @@
+@layer schedule{
+    .title{
+        color: rgb(24, 231, 21);
+        text-align: center;
+        font-family: 幼圆, Consolas, Arial, serif;
+    }
+    table {
+        background-color: aliceblue;
+        border-left: 1px solid powderblue;
+        border-top: 1px solid powderblue;
+        border-spacing: 0;
+        text-align: center;
+        margin: auto;
+    }
+    td{
+        height: 40px;
+        border-right: 1px solid powderblue;
+        border-bottom: 1px solid powderblue;
+    }
+    a{
+        text-decoration: none;
+    }
+    .usernameNote{
+        color: brown;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        @import url(../css/schedule.css);
+    </style>
+    <script type="text/javascript" src="../js/schedule.js"></script>
+</head>
+<body>
+    <h1 class="title">欢迎使用日程管理系统</h1>
+    <h3 class="title">请注册</h3>
+    <form method="post" action="/user/register" onsubmit="return checkConfirmForm()">
+        <table>
+            <tr>
+                <td>请输入账号</td>
+                <td>
+                    <label for="username">
+                        <input id="username" type="text" name="username">
+                    </label>
+                    <span class="usernameNote">1</span>
+                </td>
+            </tr>
+            <tr>
+                <td>请输入密码</td>
+                <td>
+                    <label for="password">
+                        <input id="password" type="password" name="password">
+                    </label>
+                    <span class="passwordNote">1</span>
+                </td>
+            </tr>
+            <tr>
+                <td>请确认密码</td>
+                <td>
+                    <label for="confirmPassword">
+                        <input id="confirmPassword" type="password">
+                    </label>
+                    <span class="confirmPasswordNote">1</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="register" type="submit" value="注册"/>
+                    <input class="reset" type="reset" value="重置"/>
+                    <button class="signIn"><a href="login.html">去登录</a></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

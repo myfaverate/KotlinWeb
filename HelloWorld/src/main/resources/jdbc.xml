@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbc>
+    <dev id="1">
+        <username>root</username>
+        <password>root</password>
+        <url>jdbc:mysql://localhost:3306/hello</url>
+        <driver>com.mysql.cj.jdbc.driver</driver>
+    </dev>
+    <product id="2">
+        <username>rootPro</username>
+        <password>rootPro</password>
+        <url>jdbc:mysql://localhost:3306/product</url>
+        <driver>com.mysql.cj.jdbc.driver</driver>
+    </product>
+</jdbc>
