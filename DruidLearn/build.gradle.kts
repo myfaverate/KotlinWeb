@@ -1,13 +1,13 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.1.0"
 }
 
 group = "edu.tyut"
 version = "1.0-SNAPSHOT"
 
-// repositories {
-//     mavenCentral()
-// }
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     // druid

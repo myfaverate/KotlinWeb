@@ -8,12 +8,38 @@ kotlinxDatetime = "0.6.1"
 kotlinxSerializationJSON = "1.7.2"
 kotlinxCoroutines = "1.8.1"
 orgGrettyVersion = "4.1.6"
+# Spring Version
+springVersion = "6.2.1"
+# slf4jVersion
+slf4jVersion = "2.0.16"
+# logbackVersion
+logbackVersion = "1.5.15"
+mybatisVersion = "3.5.17"
+mybatisSpringVersion = "3.0.4"
+druidVersion = "1.2.24"
+mysqlVersion = "9.1.0"
+jacksonModuleKotlinVersion = "2.18.2"
+thymeleafVersion = "3.1.3.RELEASE"
+pagehelperVersion = "6.1.0"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
 kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+springMVC = { module = "org.springframework:spring-webmvc", version.ref = "springVersion" }
+slf4jApi = { module = "org.slf4j:slf4j-api", version.ref = "slf4jVersion" }
+logbackClassic = { module = "ch.qos.logback:logback-classic", version.ref = "logbackVersion" }
+springJDBC = { module = "org.springframework:spring-jdbc", version.ref = "springVersion" }
+springAspects = { module = "org.springframework:spring-aspects", version.ref = "springVersion" }
+springTest = { module = "org.springframework:spring-test", version.ref = "springVersion" }
+mybatis = { module = "org.mybatis:mybatis", version.ref = "mybatisVersion" }
+mybatisSpring = { module = "org.mybatis:mybatis-spring", version.ref = "mybatisSpringVersion" }
+druid = { module = "com.alibaba:druid", version.ref = "druidVersion" }
+mysql = { module = "com.mysql:mysql-connector-j", version.ref = "mysqlVersion" }
+jacksonModuleKotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jacksonModuleKotlinVersion"}
+thymeleafSpring = { module = "org.thymeleaf:thymeleaf-spring6", version.ref = "thymeleafVersion"}
+pageHelper = { module = "com.github.pagehelper:pagehelper", version.ref = "pagehelperVersion"}
 
 # Libraries can be bundled together for easier import
 [bundles]
@@ -22,3 +48,4 @@ kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutine
 [plugins]
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 orgGretty = { id = "org.gretty", version.ref = "orgGrettyVersion" }
+allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "kotlin" }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+</head>
+<body>
+    <form th:action="@{/employee/add}" method="post">
+        员工姓名:
+        <label>
+            <input type="text" name="emp_name"/>
+        </label>
+        年龄:
+        <label>
+            <input type="text" name="emp_age"/>
+        </label>
+        性别:
+        <label>
+            <input type="text" name="emp_gender"/>
+        </label>
+        邮箱:
+        <label>
+            <input type="email" name="emp_email">
+        </label>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

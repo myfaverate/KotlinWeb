@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
+    <script th:src="@{/static/js/employee.js}"></script>
+</head>
+<!--/*@thymesVar id="employeePage" type="com.github.pagehelper.PageInfo<edu.tyut.bean.Employee>"*/-->
+<body>
+    <table>
+        <tr>
+            <th colspan="7">员工列表</th>
+        </tr>
+        <tr>
+            <th>流水号</th>
+            <th>员工id</th>
+            <th>员工姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>邮箱</th>
+            <th>操作 &nbsp;&nbsp; <a th:href="@{/employee_add}">添加</a></th>
+        </tr>
+        <!--/*@thymesVar id="employee" type="edu.tyut.bean.Employee"*/-->
+        <tr th:each="employee, status : ${employeePage.list}">
+            <td th:text="${status.count}"></td>
+            <td th:text="${employee.empId}"></td>
+            <td th:text="${employee.empName}"></td>
+            <td th:text="${employee.age}"></td>
+            <td th:text="${employee.gender}"></td>
+            <td th:text="${employee.email}"></td>
+            <td>
+                <!-- 'deleteEmployeeById(${employee.empId})' -->
+                <!-- <a href="#" th:onclick="'deleteEmployeeById(\''+ ${employee.empId} +'\')'">删除</a> -->
+                <a id="delete" th:href="@{/employee/delete/{empId}(empId=${employee.empId})}">删除</a>
+                <a th:href="@{/employee/{empId}(empId=${employee.empId})}">修改</a>
+            </td>
+        </tr>
+    </table>
+<div id="page">
+    <a th:if="${employeePage.hasPreviousPage}" th:href="@{/employee/page/1}">首页</a>
+    <a th:if="${employeePage.hasPreviousPage}" th:href="@{/employee/page/{page}(page=${employeePage.prePage})}">上一页</a>
+    <span th:each="num : ${employeePage.navigatepageNums}">
+        <a th:if="${employeePage.pageNum == num}" style="color: crimson" th:href="@{/employee/page/{page}(page=${num})}" th:text="'['+${num}+']'"></a>
+        <a th:if="${employeePage.pageNum != num}" th:href="@{/employee/page/{page}(page=${num})}" th:text="${num}"></a>
+    </span>
+    <a th:if="${employeePage.hasNextPage}" th:href="@{/employee/page/{page}(page=${employeePage.nextPage})}">下一页</a>
+    <a th:if="${employeePage.hasNextPage}" th:href="@{/employee/page/{page}(page=${employeePage.pages})}">尾页</a>
+</div>
+<a id="refresh" th:href="@{/employee/page/1}">查看员工</a>
+</body>
+</html>

@@ -20,7 +20,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/SSM_01" />
             <option value="$PROJECT_DIR$/Spring01" />
+            <option value="$PROJECT_DIR$/SpringMVC_Init" />
+            <option value="$PROJECT_DIR$/SpringMVC_Interceptor" />
             <option value="$PROJECT_DIR$/Spring_MVC_01" />
             <option value="$PROJECT_DIR$/Spring_MVC_02" />
             <option value="$PROJECT_DIR$/app" />

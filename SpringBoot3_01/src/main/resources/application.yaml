@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SpringBoot3_01
+
+user:
+  username: "张书豪"
+  password: "1234455"
+  age: 17
+  salary: 10
+logging:
+  pattern:
+    console: "%yellow([%date{yyyy-MM-dd HH:mm:ss}]) %blue([%thread]) %green(%file:%line) %highlight(%-5level){FATAL=red, ERROR=bright-red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=blue} %cyan(%logger{36}) : %magenta(%msg%n)"

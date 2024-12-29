@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+</head>
+<!--/*@thymesVar id="employee" type="edu.tyut.bean.Employee"*/-->
+<body>
+    <form th:action="@{/employee/update}" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="emp_id" th:value="${employee.empId}">
+        员工姓名:
+        <label>
+            <input type="text" name="emp_name" th:value="${employee.empName}"/>
+        </label>
+        年龄:
+        <label>
+            <input type="text" name="emp_age" th:value="${employee.age}"/>
+        </label>
+        性别:
+        <label>
+            <input type="text" name="emp_gender" th:value="${employee.gender}"/>
+        </label>
+        邮箱:
+        <label>
+            <input type="email" name="emp_email" th:value="${employee.email}">
+        </label>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

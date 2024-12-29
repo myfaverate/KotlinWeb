@@ -1,0 +1,26 @@
+# Version catalog is a central place for you to declare and version dependencies
+# https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+kotlin = "2.1.0"
+springBootVersion = "3.4.1"
+dependencyManagementVersion = "1.1.7"
+
+[libraries]
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web"}
+spring-boot-starter-data-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis"}
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin"}
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect"}
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test"}
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5"}
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher"}
+
+# Libraries can be bundled together for easier import
+[bundles]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+springframework-boot = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+dependency-management = { id = "io.spring.dependency-management", version.ref = "dependencyManagementVersion" }
