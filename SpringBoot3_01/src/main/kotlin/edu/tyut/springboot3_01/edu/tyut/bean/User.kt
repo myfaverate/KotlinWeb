@@ -1,10 +1,11 @@
 package edu.tyut.springboot3_01.edu.tyut.bean
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement
 import org.springframework.boot.context.properties.ConfigurationProperties
-import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.stereotype.Component
+import java.io.Serializable
 
 @ConfigurationProperties(prefix = "user")
+@JacksonXmlRootElement(localName = "User")
 // @Component
 data class User(
     var username: String = "",

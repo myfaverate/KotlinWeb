@@ -20,9 +20,15 @@ repositories {
 
 dependencies {
     implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.actuator)
+    implementation(libs.micrometer.registry.prometheus)
+    implementation(libs.spring.kafka)
     implementation(libs.spring.boot.starter.data.redis)
     implementation(libs.jackson.module.kotlin)
+    implementation(libs.jackson.dataformat.xml)
+    implementation(libs.jackson.dataformat.yaml)
     implementation(libs.kotlin.reflect)
+    implementation(libs.webmvc.api)
     testImplementation(libs.spring.boot.starter.test)
     testImplementation(libs.kotlin.test.junit5)
     testRuntimeOnly(libs.junit.platform.launcher)

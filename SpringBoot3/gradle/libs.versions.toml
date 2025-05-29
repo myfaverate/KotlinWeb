@@ -3,9 +3,9 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-kotlin = "2.1.0"
+kotlin = "2.1.10"
 kotlinxDatetime = "0.6.1"
-kotlinxSerializationJSON = "1.7.2"
+kotlinxSerializationJSON = "1.8.0"
 kotlinxCoroutines = "1.8.1"
 
 [libraries]
@@ -20,3 +20,5 @@ kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutine
 
 [plugins]
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }

@@ -1,0 +1,32 @@
+[versions]
+kotlin = "2.1.20"
+springBootVersion = "3.4.5"
+springDependencyManagement = "1.1.7"
+graalvmNativeVersion = "0.10.6"
+kotlinxSerializationJson = "1.8.1"
+exposed = "1.0.0-beta-2"
+
+[libraries]
+spring-webmvc = { module = "org.springframework:spring-webmvc" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+mysql-connector-j = { module = "com.mysql:mysql-connector-j" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+spring-boot-starter-jetty = { module = "org.springframework.boot:spring-boot-starter-jetty" }
+spring-boot-starter-jdbc = { module = "org.springframework.boot:spring-boot-starter-jdbc" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+exposed-spring-boot-starter = { group = "org.jetbrains.exposed", name = "exposed-spring-boot-starter", version.ref = "exposed" }
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+hikariCP = { group = "com.zaxxer", name = "HikariCP" }
+
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+org-springframework-boot = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+io-spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }
+org-graalvm-buildtools-native = { id = "org.graalvm.buildtools.native", version.ref = "graalvmNativeVersion" }

@@ -6,12 +6,19 @@
 kotlin = "2.1.0"
 springBootVersion = "3.4.1"
 dependencyManagementVersion = "1.1.7"
+webmvcApiVersion = "2.7.0"
 
 [libraries]
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web"}
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator"}
+micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-prometheus"}
+spring-kafka = { module = "org.springframework.kafka:spring-kafka"}
 spring-boot-starter-data-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis"}
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin"}
+jackson-dataformat-xml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-xml"}
+jackson-dataformat-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml"}
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect"}
+webmvc-api = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "webmvcApiVersion" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test"}
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5"}
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher"}
