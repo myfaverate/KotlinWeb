@@ -32,7 +32,7 @@ internal class UserDaoImpl : UserDao {
                 password = resultRow[password],
                 nickname = resultRow[nickname],
             )
-        } ?: User(
+        } ?: User (
             id = 0,
             account = "default",
             password = "default",
