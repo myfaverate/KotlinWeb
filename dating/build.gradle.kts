@@ -33,6 +33,7 @@ dependencies {
 	implementation(libs.exposed.core)
 	implementation(libs.exposed.jdbc)
 	implementation(libs.mysql.connector.j)
+	implementation(libs.kotlinx.coroutines.reactor)
 	testImplementation(libs.spring.boot.starter.test)
 	testImplementation(libs.kotlin.test.junit5)
 	testRuntimeOnly(libs.junit.platform.launcher)

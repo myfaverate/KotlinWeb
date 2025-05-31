@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController
 internal class LoginController {
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
     @PostMapping(value = ["/getCode"])
-    internal fun getCode(
+    internal suspend fun getCode(
         @RequestBody phoneRequest: PhoneRequest,
         @RequestHeader headers: Map<String, String>
     ): Result {
@@ -30,7 +30,7 @@ internal class LoginController {
     }
 
     @PostMapping(value = ["/loginVerification"])
-    internal fun loginVerification(
+    internal suspend fun loginVerification(
         @RequestBody codePhoneBean: CodePhoneBean,
         @RequestHeader headers: Map<String, String>
     ): Result {
@@ -39,7 +39,7 @@ internal class LoginController {
     }
 
     @PostMapping(value = ["/register"])
-    internal fun register(
+    internal suspend fun register(
         @RequestBody codePhoneBean: CodePhoneBean,
         @RequestHeader headers: Map<String, String>
     ): Result {

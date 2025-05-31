@@ -18,14 +18,14 @@ internal class HelloController {
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
     @GetMapping(value = ["/hello"])
-    internal fun hello(
+    internal suspend fun hello(
         @RequestHeader headers: Map<String, String>,
     ): String {
         logger.info("hello -> headers: $headers")
         return "Hello World"
     }
     @PostMapping(value = ["/person"])
-    internal fun person(
+    internal suspend fun person(
         @RequestBody person: Person,
         @RequestHeader headers: Map<String, String>,
     ): Person {
