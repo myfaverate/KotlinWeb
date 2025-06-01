@@ -36,7 +36,7 @@ internal class HelloController {
         @RequestHeader headers: Map<String, String>,
     ): Result<Boolean> {
         logger.info("success -> headers: $headers")
-        return Result(code = 200, message = "success", data = Random.nextBoolean())
+        return Result.success(message = "success", data = Random.nextBoolean())
     }
 
     @PostMapping(value = ["/person"])

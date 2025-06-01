@@ -2,8 +2,9 @@ package edu.tyut.dating.bean
 
 import kotlinx.serialization.Serializable
 
+@ConsistentCopyVisibility
 @Serializable
-internal data class Result <T> (
+internal data class Result <T> private constructor(
     internal val code: Int,
     internal val message: String,
     internal val data: T,
