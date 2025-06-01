@@ -19,8 +19,7 @@ internal class LoginController {
         @RequestHeader headers: Map<String, String>
     ): edu.tyut.dating.bean.Result<AuthCodeBean> {
         logger.info("phoneRequest: $phoneRequest, headers: $headers")
-        return edu.tyut.dating.bean.Result(
-            code = 200,
+        return edu.tyut.dating.bean.Result.success(
             message = "成功",
             data = AuthCodeBean(code = "888888")
         ).apply {
@@ -34,7 +33,7 @@ internal class LoginController {
         @RequestHeader headers: Map<String, String>
     ): edu.tyut.dating.bean.Result<UserInfoStateBean> {
         logger.info("loginVerification: $codePhoneBean, headers: $headers")
-        return edu.tyut.dating.bean.Result(code = 200, message = "成功", data = UserInfoStateBean(isNew = true))
+        return edu.tyut.dating.bean.Result.success(message = "成功", data = UserInfoStateBean(isNew = true))
     }
 
     @PostMapping(value = ["/register"])
@@ -43,6 +42,6 @@ internal class LoginController {
         @RequestHeader headers: Map<String, String>
     ): edu.tyut.dating.bean.Result<UserInfoStateBean> {
         logger.info("loginVerification: $codePhoneBean, headers: $headers")
-        return edu.tyut.dating.bean.Result(code = 200, message = "成功", data = UserInfoStateBean(isNew = true))
+        return edu.tyut.dating.bean.Result.success(message = "成功", data = UserInfoStateBean(isNew = true))
     }
 }
