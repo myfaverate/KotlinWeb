@@ -46,9 +46,10 @@ internal class PhotoDaoImpl : PhotoDao {
         logger.info("Updated photo: $rows")
     }
 
-    override fun deleteById(id: Long) {
+    override fun deleteById(id: Long): Int {
         val rows: Int = PhotoEntity.deleteWhere { PhotoEntity.id eq id }
         logger.info("Deleted photo: $rows")
+        return rows
     }
 
     override fun findAll(): List<Photo> {
@@ -60,5 +61,21 @@ internal class PhotoDaoImpl : PhotoDao {
                 description = resultRow[PhotoEntity.description],
             )
         }
+    }
+
+    override fun getPhotosPage(
+        pageIndex: Int,
+        pageSize: Int
+    ): List<Photo> {
+        return PhotoEntity.selectAll()
+            .limit(count = pageSize)
+            .offset(start = (pageIndex - 1) * pageSize.toLong()).map { resultRow: ResultRow ->
+                Photo(
+                    id = resultRow[PhotoEntity.id].value,
+                    photoName = resultRow[PhotoEntity.photoName],
+                    photoUrl = resultRow[PhotoEntity.photoUrl],
+                    description = resultRow[PhotoEntity.description],
+                )
+            }
     }
 }

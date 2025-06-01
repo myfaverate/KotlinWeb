@@ -20,12 +20,16 @@ internal class PhotoServiceImpl (
         photoDao.update(photo)
     }
 
-    override fun deleteById(id: Long) {
-        photoDao.deleteById(id)
+    override fun deleteById(id: Long): Int {
+        return photoDao.deleteById(id)
     }
 
     override fun findAll(): List<Photo> {
         return photoDao.findAll()
+    }
+
+    override fun getPhotosPage(pageIndex: Int, pageSize: Int): List<Photo> {
+        return photoDao.getPhotosPage(pageIndex = pageIndex, pageSize = pageSize)
     }
 
 }

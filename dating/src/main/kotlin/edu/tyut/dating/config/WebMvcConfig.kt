@@ -1,9 +1,8 @@
 package edu.tyut.dating.config
 
+import jakarta.servlet.MultipartConfigElement
 import org.slf4j.LoggerFactory
-import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath
 import org.springframework.boot.web.servlet.ServletRegistrationBean
-import org.springframework.cglib.proxy.Dispatcher
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.DispatcherServlet
@@ -15,6 +14,10 @@ internal class WebMvcConfig {
 
     @Bean
      internal fun dispatcherServletRegister(dispatcherServlet: DispatcherServlet): ServletRegistrationBean<DispatcherServlet> {
-        return ServletRegistrationBean(dispatcherServlet, "/")
+        return ServletRegistrationBean(dispatcherServlet, "/").apply {
+            multipartConfig = MultipartConfigElement(System.getProperty("java.io.tmpdir").apply {
+                logger.info("Using java.io.tmpdir: $this")
+            })
+        }
     }
 }

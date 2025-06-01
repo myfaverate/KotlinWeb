@@ -1,14 +1,20 @@
 package edu.tyut.dating.controller
 
 import edu.tyut.dating.bean.Person
+import edu.tyut.dating.bean.Result
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.multipart.MultipartResolver
+import kotlin.random.Random
 
 
 @RestController(value = "HelloController")
@@ -24,6 +30,15 @@ internal class HelloController {
         logger.info("hello -> headers: $headers")
         return "Hello World"
     }
+
+    @GetMapping(value = ["/success"], produces = [MediaType.APPLICATION_JSON_VALUE])
+    internal suspend fun success(
+        @RequestHeader headers: Map<String, String>,
+    ): Result<Boolean> {
+        logger.info("success -> headers: $headers")
+        return Result(code = 200, message = "success", data = Random.nextBoolean())
+    }
+
     @PostMapping(value = ["/person"])
     internal suspend fun person(
         @RequestBody person: Person,

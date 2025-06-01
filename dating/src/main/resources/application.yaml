@@ -1,6 +1,9 @@
 spring:
   application:
     name: dating
+  web:
+    resources:
+      static-locations: file:./uploads
   datasource:
     url: jdbc:mysql://localhost:3306/schedule_system
     username: root
