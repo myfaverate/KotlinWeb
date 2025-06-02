@@ -15,12 +15,17 @@ application {
     mainClass.set("edu.tyut.ApplicationKt")
 }
 
+// not problem
+tasks.war {
+    archiveFileName.set("${project.name}.war")
+}
+// have a problem
 tasks.jar {
+    archiveFileName.set("${project.name}.jar")
     manifest {
         attributes["Main-Class"] = "edu.tyut.ApplicationKt"
     }
-    // 排除签名文件
-    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) }) {
+    from(configurations.runtimeClasspath.get().map { zipTree(it) }) {
         exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
     }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE

@@ -11,6 +11,9 @@ private val logger: Logger = LoggerFactory.getLogger("Application")
 internal fun main() {
 
     val port = 8080
+    // if tomcat server war
+    // val contextPath = "/ssm-mvc"
+    // if jar
     val contextPath = ""
     val webAppDir = File("src/main/webapp")
     val tomcatBaseDir = "build/tomcat"
