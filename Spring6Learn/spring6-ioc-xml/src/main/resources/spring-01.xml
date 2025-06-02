@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="happy" class="edu.tyut.bean.Happy">
+        <constructor-arg value="hello" name="name"/>
+    </bean>
+
+    <bean id="happyByFactory" class="edu.tyut.factory.HappyFactory" factory-method="happyFactory$spring6_ioc_xml"/>
+    <bean id="happyFactory" class="edu.tyut.factory.HappyFactoryImpl"/>
+    <bean id="happyByInstanceFactory" factory-bean="happyFactory" factory-method="happyFactory$spring6_ioc_xml"/>
+
+</beans>
