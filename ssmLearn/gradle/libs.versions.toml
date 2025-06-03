@@ -26,6 +26,7 @@ springContext = { group = "org.springframework", name = "spring-context", versio
 springWebmvc = { group = "org.springframework", name = "spring-webmvc", version.ref = "springVersion" }
 springJdbc = { group = "org.springframework", name = "spring-jdbc", version.ref = "springVersion" }
 slf4jApi = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4jVersion" }
+julToSlf4j = { group = "org.slf4j", name = "jul-to-slf4j", version.ref = "slf4jVersion" }
 logback = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackVersion" }
 hikariCP = { group = "com.zaxxer", name = "HikariCP", version.ref = "hikariCPVersion" }
 mysql = { group = "com.mysql", name = "mysql-connector-j", version.ref = "mysqlVersion" }
