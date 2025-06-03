@@ -33,6 +33,7 @@ tasks.jar {
 
 dependencies {
     implementation(libs.slf4jApi)
+    implementation(libs.julToSlf4j)
     implementation(libs.logback)
     implementation(libs.springContext)
     implementation(libs.tomcat)

@@ -4,11 +4,15 @@ import org.apache.catalina.connector.Connector
 import org.apache.catalina.startup.Tomcat
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.slf4j.bridge.SLF4JBridgeHandler
 import java.io.File
 
 private val logger: Logger = LoggerFactory.getLogger("Application")
 
 internal fun main() {
+
+    SLF4JBridgeHandler.removeHandlersForRootLogger()
+    SLF4JBridgeHandler.install()
 
     val port = 8080
     // if tomcat server war

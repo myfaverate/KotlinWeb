@@ -12,7 +12,7 @@
         </encoder>
     </appender>
 
-    <root level="debug">
+    <root level="DEBUG">
         <appender-ref ref="ASYNC_CONSOLE"/>
     </root>
 
