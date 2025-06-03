@@ -9,6 +9,9 @@ import java.io.File
 
 private val logger: Logger = LoggerFactory.getLogger("Application")
 
+@Deprecated(message = """
+    Please refer to the ssm-input module.
+""")
 internal fun main() {
 
     SLF4JBridgeHandler.removeHandlersForRootLogger()
