@@ -4,6 +4,7 @@ import edu.tyut.config.MvcConfig
 import org.apache.catalina.Context
 import org.apache.catalina.Wrapper
 import org.apache.catalina.connector.Connector
+import org.apache.catalina.servlets.DefaultServlet
 import org.apache.catalina.startup.Tomcat
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -45,6 +46,13 @@ private fun main() {
 
     val dispatcher = DispatcherServlet(appContext)
     val servlet: Wrapper = Tomcat.addServlet(context, "dispatcher", dispatcher)
+    val defaultServlet: Wrapper = context.createWrapper().apply {
+        name = "default"
+        servletClass = "org.apache.catalina.servlets.DefaultServlet"
+        loadOnStartup = 1
+    }
+    context.addChild(defaultServlet)
+    context.addServletMappingDecoded("/", "default")
     servlet.isAsyncSupported = true
     servlet.loadOnStartup = 1
     servlet.addMapping("/")

@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 @ConsistentCopyVisibility
-internal data class Person private constructor(
+internal data class Person internal constructor(
     private val name: String,
     private val age: Int,
     private val gender: String,

@@ -3,6 +3,7 @@ package edu.tyut.controller
 import edu.tyut.bean.Person
 import edu.tyut.bean.User
 import jakarta.servlet.http.Cookie
+import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
@@ -88,5 +89,27 @@ private class HelloController {
         coroutineScope {  }
         logger.info("Data called cookie: {}", cookie)
         return cookie.toString()
+    }
+
+    @GetMapping(value = ["/index"])
+    private suspend fun index(
+        request: HttpServletRequest
+    ): String = withContext(Dispatchers.Default) {
+        logger.info("Data called index: {}", Thread.currentThread().name)
+        request.setAttribute("data", "zsh")
+        return@withContext "index"
+    }
+    @GetMapping(value = ["/home"])
+    private suspend fun home(): String = withContext(Dispatchers.Default) {
+        logger.info("Data called home: {}", Thread.currentThread().name)
+        return@withContext "redirect:index"
+        // return@withContext "forward:index"
+    }
+
+    @GetMapping(value = ["/persons"], produces = [MediaType.APPLICATION_JSON_VALUE])
+    @ResponseBody
+    private suspend fun persons(): List<Person> = withContext(Dispatchers.Default) {
+        logger.info("Data called user user: {}", Thread.currentThread().name)
+        return@withContext listOf(Person(name = "zss", age = 17, gender = "男"), Person(name = "zss", age = 17, gender = "男"))
     }
 }

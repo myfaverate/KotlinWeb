@@ -10,6 +10,8 @@ import java.io.File
 private val logger: Logger = LoggerFactory.getLogger("Application")
 
 @Deprecated(message = """
+    war project use this config
+    jar project use ssm-input module config
     Please refer to the ssm-input module.
 """)
 internal fun main() {
@@ -18,9 +20,7 @@ internal fun main() {
     SLF4JBridgeHandler.install()
 
     val port = 8080
-    // if tomcat server war
-    // val contextPath = "/ssm-mvc"
-    // if jar
+    // not need change
     val contextPath = ""
     val webAppDir = File("src/main/webapp")
     val tomcatBaseDir = "build/tomcat"

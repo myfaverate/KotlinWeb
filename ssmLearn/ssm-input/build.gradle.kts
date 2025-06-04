@@ -36,6 +36,7 @@ dependencies {
     implementation(libs.kotlinxReactor)
     implementation(libs.kotlinReflect)
     implementation(libs.kotlinxSerialization)
+    implementation(libs.thymeleafSpring)
     testImplementation(kotlin("test"))
 }
 
