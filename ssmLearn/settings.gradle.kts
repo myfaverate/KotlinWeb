@@ -25,3 +25,4 @@ include(":utils")
 rootProject.name = "ssmLearn"
 include("ssm-mvc")
 include("ssm-input")
+include("ssm-integrate")

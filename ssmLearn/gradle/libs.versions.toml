@@ -14,6 +14,7 @@ hikariCPVersion = "6.3.0"
 mysqlVersion = "9.3.0"
 tomcatVersion = "11.0.7"
 thymeleafVersion = "3.1.3.RELEASE"
+exposed = "1.0.0-beta-2"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -26,6 +27,7 @@ kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = 
 springContext = { group = "org.springframework", name = "spring-context", version.ref = "springVersion" }
 springWebmvc = { group = "org.springframework", name = "spring-webmvc", version.ref = "springVersion" }
 springJdbc = { group = "org.springframework", name = "spring-jdbc", version.ref = "springVersion" }
+springAspects = { group = "org.springframework", name = "spring-aspects", version.ref = "springVersion" }
 slf4jApi = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4jVersion" }
 julToSlf4j = { group = "org.slf4j", name = "jul-to-slf4j", version.ref = "slf4jVersion" }
 logback = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackVersion" }
@@ -34,6 +36,11 @@ mysql = { group = "com.mysql", name = "mysql-connector-j", version.ref = "mysqlV
 tomcat = { group = "org.apache.tomcat.embed", name = "tomcat-embed-core", version.ref = "tomcatVersion" }
 jasper = { group = "org.apache.tomcat.embed", name = "tomcat-embed-jasper", version.ref = "tomcatVersion" }
 thymeleafSpring = { module = "org.thymeleaf:thymeleaf-spring6", version.ref = "thymeleafVersion"}
+
+exposedCore = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
+exposedR2dbc = { module = "org.jetbrains.exposed:exposed-r2dbc", version.ref = "exposed" }
+exposedJdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+
 # Libraries can be bundled together for easier import
 [bundles]
 kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
