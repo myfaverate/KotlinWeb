@@ -108,7 +108,8 @@ private fun main() {
 
     // 手动初始化 Spring Web 容器
     val appContext = AnnotationConfigWebApplicationContext()
-    appContext.register(WebMvcConfig::class.java, SpringConfig::class.java, ExposedConfig::class.java)
+    // appContext.register(WebMvcConfig::class.java, SpringConfig::class.java, ExposedConfig::class.java)
+    appContext.register(WebMvcConfig::class.java)
 
     val dispatcher = DispatcherServlet(appContext)
     val servlet: Wrapper = Tomcat.addServlet(context, "dispatcher", dispatcher)

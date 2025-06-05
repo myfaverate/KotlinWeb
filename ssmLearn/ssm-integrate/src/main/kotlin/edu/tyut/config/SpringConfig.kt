@@ -12,7 +12,7 @@ import javax.sql.DataSource
 @Configuration
 @EnableAspectJAutoProxy
 @EnableTransactionManagement // 自己实现exposed的事务管理器
-@ComponentScan(basePackages = ["edu.tyut.dao", "edu.tyut.service"])
+// @ComponentScan(basePackages = ["edu.tyut.dao", "edu.tyut.service"])
 internal open class SpringConfig {
 
     @Bean

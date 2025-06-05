@@ -18,7 +18,8 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = ["edu.tyut.controller", "edu.tyut.error"])
+// @ComponentScan(basePackages = ["edu.tyut.controller", "edu.tyut.error"])
+@ComponentScan(basePackages = ["edu.tyut"])
 internal open class WebMvcConfig : CoroutinesWebMvcConfigurer() {
 
     private val logger: Logger = LoggerFactory.getLogger(WebMvcConfig::class.java)
