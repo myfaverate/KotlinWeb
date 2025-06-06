@@ -21,5 +21,6 @@ plugins {
 // Learn more about structuring projects with Gradle - https://docs.gradle.org/8.7/userguide/multi_project_builds.html
 include(":app")
 include(":utils")
+include(":springboot3-exposed-r2dbc")
 
 rootProject.name = "SpringBoot3"
