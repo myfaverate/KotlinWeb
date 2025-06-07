@@ -5,54 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93ba24a7-4f3a-4d34-81f1-f3e8d7a80ee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot3-01/src/main/kotlin/edu/tyut/controller/HelloController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot3-01/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/main/kotlin/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/main/resources/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/main/resources/jdbc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/main/resources/jdbc2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/test/kotlin/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot3-custom-starter/src/main/kotlin/edu/tyut/config/CustomAutoConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot3-custom-starter/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot3-custom-starter/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/src/main/kotlin/edu/tyut/springboot_01/SpringBoot01Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/springboot3-01/src/main/kotlin/edu/tyut/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot_01/src/test/kotlin/edu/tyut/springboot_01/SpringBoot01ApplicationTests.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +27,39 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/springboot3-01">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/springboot3-exposed-r2dbc">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/springboot3-custom-starter">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SpringBoot3" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringBoot3" type="f1a62948:ProjectNode" />
+                <item name="springboot3-custom-starter" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringBoot3" type="f1a62948:ProjectNode" />
+                <item name="springboot3-custom-starter" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringBoot3" type="f1a62948:ProjectNode" />
+                <item name="springboot3-custom-starter" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -84,6 +71,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -109,9 +97,9 @@
   <component name="MavenRunner">
     <option name="jreName" value="21" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2y8ZVv1pZR36heXdicNlkYdFCvD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -120,6 +108,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build SpringBoot3.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.SpringBoot3:springboot3-01 [clean].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-01 [nativeCompile].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-custom-starter [clean].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-custom-starter [jar].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-custom-starter [kotlinSourcesJar].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-custom-starter [publishKotlinPublicationToMavenRepository].executor": "Run",
+    "Gradle.SpringBoot3:springboot3-exposed-r2dbc [nativeCompile].executor": "Run",
     "Kotlin.AppKt.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -128,46 +124,135 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Application.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Application.executor": "Debug",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/SoftWare/LanguageProjects/KotlinWebProjects/SpringBoot3/springboot3-01/src/main/kotlin/edu/tyut",
+    "last_opened_file_path": "D:/SoftWare/LanguageProjects/KotlinWebProjects/SpringBoot3/springboot3-exposed-r2dbc/libs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/SoftWare/LanguageProjects/KotlinWebProjects/SpringBoot3/springboot3-01/src/main/kotlin/Main.kt",
+    "onboarding.tips.debug.path": "D:/SoftWare/LanguageProjects/KotlinWebProjects/SpringBoot3/springboot3-custom-starter/src/main/kotlin/Main.kt",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "preferences.sourceCode.YAML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-01\src\main\kotlin\edu\tyut" />
+      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-exposed-r2dbc\libs" />
+      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-custom-starter\src\main\resources" />
+      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-01\src\main\resources\META-INF\services" />
       <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-01\src\main\resources" />
+      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-01\src\main\kotlin\edu\tyut" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SoftWare\LanguageProjects\KotlinWebProjects\SpringBoot3\springboot3-01\src\main\resources\META-INF\services" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="edu.tyut.config" />
+      <recent name="edu.tyut.bean" />
+      <recent name="edu.tyut.entity" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.tyut.app.AppKt" />
-      <module name="SpringBoot3.app.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SpringBoot3:springboot3-custom-starter [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/springboot3-custom-starter" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.tyut.MainKt" />
-      <module name="SpringBoot3.springboot3-01.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SpringBoot3:springboot3-custom-starter [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/springboot3-custom-starter" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBoot3:springboot3-custom-starter [kotlinSourcesJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/springboot3-custom-starter" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="kotlinSourcesJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBoot3:springboot3-custom-starter [publishKotlinPublicationToMavenRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/springboot3-custom-starter" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishKotlinPublicationToMavenRepository" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="SpringBoot3.springboot3-01.main" />
+      <module name="SpringBoot3.springboot3-exposed-r2dbc.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.tyut.Application" />
       <extension name="coverage">
         <pattern>
@@ -182,8 +267,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Kotlin.AppKt" />
+        <item itemvalue="Gradle.SpringBoot3:springboot3-custom-starter [publishKotlinPublicationToMavenRepository]" />
+        <item itemvalue="Gradle.SpringBoot3:springboot3-custom-starter [kotlinSourcesJar]" />
+        <item itemvalue="Gradle.SpringBoot3:springboot3-custom-starter [clean]" />
+        <item itemvalue="Gradle.SpringBoot3:springboot3-custom-starter [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +289,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749218188504</updated>
-      <workItem from="1749218189729" duration="3727000" />
+      <workItem from="1749218189729" duration="19018000" />
+      <workItem from="1749259807573" duration="9124000" />
+      <workItem from="1749269602531" duration="5004000" />
     </task>
     <servers />
   </component>
@@ -216,6 +305,21 @@
           <url>file://$PROJECT_DIR$/app/src/main/kotlin/App.kt</url>
           <line>17</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.5.0/417c80a27a49b4bf4e32aba1bea4a10af39ab86b/spring-boot-autoconfigure-3.5.0-sources.jar!/org/springframework/boot/autoconfigure/AutoConfigurationImportSelector.java</url>
+          <line>477</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/3.5.0/417c80a27a49b4bf4e32aba1bea4a10af39ab86b/spring-boot-autoconfigure-3.5.0-sources.jar!/org/springframework/boot/autoconfigure/AutoConfigurationImportSelector.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.5.0/c41f01773e26bab0d21eedd0411d0bd74a55a0a1/spring-boot-3.5.0-sources.jar!/org/springframework/boot/context/annotation/ImportCandidates.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

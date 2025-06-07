@@ -12,6 +12,8 @@ springDependencyManagement = "1.1.7"
 graalvmNativeVersion = "0.10.6"
 exposed = "1.0.0-beta-2"
 mysqlR2dbc = "1.4.1"
+slf4jVersion = "2.0.17"
+logbackVersion = "1.5.18"
 
 [libraries]
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -29,6 +31,9 @@ junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" 
 exposedSpringbootStarter = { group = "org.jetbrains.exposed", name = "exposed-spring-boot-starter", version.ref = "exposed" }
 exposedR2dbc = { module = "org.jetbrains.exposed:exposed-r2dbc", version.ref = "exposed" }
 r2dbcMysql = { group = "io.asyncer", name = "r2dbc-mysql", version.ref = "mysqlR2dbc" }
+
+slf4jApi = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4jVersion" }
+logback = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackVersion" }
 # Libraries can be bundled together for easier import
 [bundles]
 kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutines"]
