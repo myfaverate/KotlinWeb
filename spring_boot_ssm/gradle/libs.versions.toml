@@ -16,6 +16,7 @@ kotlinxDatetime = "0.6.2"
 kotlinxCoroutinesReactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinxCoroutines"  }
 kotlinxCoroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }

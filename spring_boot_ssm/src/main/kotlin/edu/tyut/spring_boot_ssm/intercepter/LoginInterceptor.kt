@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component
+import org.springframework.web.server.CoWebExceptionHandler
 import org.springframework.web.server.CoWebFilter
 import org.springframework.web.server.CoWebFilterChain
 import org.springframework.web.server.ServerWebExchange

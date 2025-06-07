@@ -5,48 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93ba24a7-4f3a-4d34-81f1-f3e8d7a80ee5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/bean/Result.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/bean/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/config/ExposedConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/controller/UserController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/dao/UserDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/dao/impl/UserDaoImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/dto/UserLoginDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/entity/ArticleEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/entity/CategoryEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/entity/UserEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/extension/String.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/intercepter/LoginInterceptor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/jwt/JwtUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/service/UserService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/service/impl/UserServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/support/SchemaInitializer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/utils/Constants.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/utils/Utils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/test/kotlin/edu/tyut/spring_boot_ssm/jwt/JwtTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/test/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/src/main/kotlin/edu/tyut/hello/HelloSpringBootApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloSpringBoot/src/test/kotlin/edu/tyut/hello/HelloSpringBootApplicationTests.kt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/exception/GlobalExceptionHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot3-exposed-r2dbc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/springboot3-exposed-r2dbc/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot3-exposed-r2dbc/src/main/kotlin/edu/tyut/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/springboot3-exposed-r2dbc/src/main/kotlin/edu/tyut/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot3-exposed-r2dbc/src/main/kotlin/edu/tyut/controller/HelloController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/springboot3-exposed-r2dbc/src/main/kotlin/edu/tyut/controller/HelloController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/SpringBootSsmApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/SpringBootSsmApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/controller/HelloController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/controller/HelloController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/controller/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/dto/UserLoginDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/dto/UserLoginDto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/intercepter/LoginInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/intercepter/LoginInterceptor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/support/SchemaInitializer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_boot_ssm/src/main/kotlin/edu/tyut/spring_boot_ssm/support/SchemaInitializer.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,7 +294,7 @@
       <workItem from="1749269602531" duration="5004000" />
       <workItem from="1749280120877" duration="2519000" />
       <workItem from="1749291998972" duration="3993000" />
-      <workItem from="1749297758918" duration="5183000" />
+      <workItem from="1749297758918" duration="5978000" />
     </task>
     <servers />
   </component>

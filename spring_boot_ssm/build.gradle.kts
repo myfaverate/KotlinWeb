@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     implementation(libs.spring.boot.starter.webflux)
+    implementation(libs.spring.boot.starter.validation)
     implementation(libs.jackson.module.kotlin)
     implementation(libs.kotlin.reflect)
     implementation(libs.javaJwt)
