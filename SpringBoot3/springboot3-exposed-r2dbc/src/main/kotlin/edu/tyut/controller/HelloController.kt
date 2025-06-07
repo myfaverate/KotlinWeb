@@ -2,7 +2,6 @@ package edu.tyut.controller
 
 import edu.tyut.bean.EmailUser
 import kotlinx.coroutines.delay
-import org.jetbrains.exposed.v1.r2dbc.SchemaUtils
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.GetMapping
@@ -17,7 +16,6 @@ private final class HelloController(
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
     @GetMapping(value = ["/hello"])
     private final suspend fun hello(): String {
-        SchemaUtils.createSchema()
         delay(timeMillis = 100)
         logger.info("HELLO WORLD emailUser: $emailUser")
         return "Hello World!"

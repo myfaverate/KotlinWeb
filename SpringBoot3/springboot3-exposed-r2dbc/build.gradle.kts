@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.springBootStarterWeb)
+    implementation(libs.springBootStarterWebFlux)
     implementation(libs.springBootStarterDataR2dbc)
     implementation(libs.jacksonModuleKotlin)
     implementation(libs.kotlinReflect)

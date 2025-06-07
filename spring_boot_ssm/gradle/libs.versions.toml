@@ -3,22 +3,31 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-kotlin = "2.1.0"
-springBootVersion = "3.4.1"
+kotlin = "2.1.20"
+springBootVersion = "3.5.0"
 dependencyManagementVersion = "1.1.7"
-graalvmVersion = "0.10.4"
-mybatisVersion = "3.0.4"
-
+graalvmVersion = "0.10.6"
+kotlinxCoroutines = "1.10.2"
+jwtVrsion = "4.5.0"
+exposed = "1.0.0-beta-2"
+mysqlR2dbc = "1.4.1"
+kotlinxDatetime = "0.6.2"
 [libraries]
-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+kotlinxCoroutinesReactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinxCoroutines"  }
+kotlinxCoroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
 spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
 kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
-mybatis-spring-boot-starter = { module = "org.mybatis.spring.boot:mybatis-spring-boot-starter", version.ref = "mybatisVersion" }
-mybatis-spring-boot-starter-test = { module = "org.mybatis.spring.boot:mybatis-spring-boot-starter-test", version.ref = "mybatisVersion" }
-mysql-connector-j = { module = "com.mysql:mysql-connector-j" }
+javaJwt = { group = "com.auth0", name = "java-jwt", version.ref = "jwtVrsion" }
+springBootStarterDataR2dbc = { module = "org.springframework.boot:spring-boot-starter-data-r2dbc" }
+exposedSpringbootStarter = { group = "org.jetbrains.exposed", name = "exposed-spring-boot-starter", version.ref = "exposed" }
+exposedR2dbc = { module = "org.jetbrains.exposed:exposed-r2dbc", version.ref = "exposed" }
+exposedKotlinDatetime = { module = "org.jetbrains.exposed:exposed-kotlin-datetime", version.ref = "exposed" }
+r2dbcMysql = { group = "io.asyncer", name = "r2dbc-mysql", version.ref = "mysqlR2dbc" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 # Libraries can be bundled together for easier import
 [bundles]
 

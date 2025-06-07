@@ -1,10 +1,21 @@
 package edu.tyut.spring_boot_ssm.controller
 
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class HelloController {
+private final class HelloController {
+    private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
     @GetMapping("/hello")
-    fun hello(): String = "Hello Spring Boot 世界!"
+    private final suspend fun hello(): String {
+        logger.info("Hello -> ${Thread.currentThread()}")
+        return "Hello Spring Boot 世界!"
+    }
+    @GetMapping("/hello1")
+    private final suspend fun hello1(): String {
+        logger.info("Hello1 -> ${Thread.currentThread()}")
+        return "Hello Spring Boot 1世界!"
+    }
 }
