@@ -8,4 +8,13 @@ internal interface CategoryDao {
     suspend fun add(
         categoryDto: CategoryDto,
     ): Boolean
+    suspend fun list(
+        userId: UInt,
+    ): List<Category>
+    suspend fun detail(
+        categoryId: UInt,
+    ): Category
+    suspend fun update(
+        categoryDto: CategoryDto
+    ): Boolean
 }

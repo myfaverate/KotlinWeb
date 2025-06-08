@@ -1,5 +1,6 @@
 package edu.tyut.spring_boot_ssm.support
 
+import edu.tyut.spring_boot_ssm.entity.ArticleEntity
 import edu.tyut.spring_boot_ssm.entity.CategoryEntity
 import edu.tyut.spring_boot_ssm.entity.UserEntity
 import kotlinx.coroutines.runBlocking
@@ -19,7 +20,7 @@ internal final class SchemaInitializer : ApplicationRunner {
         suspendTransactionAsync {
             logger.info("Starting application before sourceArgs: {}, nonOptionArgs: {}, optionNames: {}, thread: {}", args?.sourceArgs, args?.nonOptionArgs, args?.optionNames,
                 Thread.currentThread())
-            // SchemaUtils.create(tables = arrayOf<Table>(UserEntity, CategoryEntity))
+            SchemaUtils.create(tables = arrayOf<Table>(UserEntity, CategoryEntity, ArticleEntity))
             // SchemaUtils.createSchema()
             logger.info("Starting application after sourceArgs: {}, nonOptionArgs: {}, optionNames: {}, thread: {}", args?.sourceArgs, args?.nonOptionArgs, args?.optionNames,
                 Thread.currentThread())
