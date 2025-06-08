@@ -1,0 +1,45 @@
+# Version catalog is a central place for you to declare and version dependencies
+# https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
+# https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+kotlin = "2.1.20"
+springBootVersion = "3.5.0"
+dependencyManagementVersion = "1.1.7"
+graalvmVersion = "0.10.6"
+kotlinxCoroutines = "1.10.2"
+jwtVrsion = "4.5.0"
+exposed = "1.0.0-beta-2"
+mysqlR2dbc = "1.4.1"
+kotlinxDatetime = "0.6.2"
+kotlinxSerializationJson = "1.8.1"
+[libraries]
+kotlinxCoroutinesReactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinxCoroutines"  }
+kotlinxCoroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-starter-thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+javaJwt = { group = "com.auth0", name = "java-jwt", version.ref = "jwtVrsion" }
+springBootStarterDataR2dbc = { module = "org.springframework.boot:spring-boot-starter-data-r2dbc" }
+exposedSpringbootStarter = { group = "org.jetbrains.exposed", name = "exposed-spring-boot-starter", version.ref = "exposed" }
+exposedR2dbc = { module = "org.jetbrains.exposed:exposed-r2dbc", version.ref = "exposed" }
+exposedKotlinDatetime = { module = "org.jetbrains.exposed:exposed-kotlin-datetime", version.ref = "exposed" }
+r2dbcMysql = { group = "io.asyncer", name = "r2dbc-mysql", version.ref = "mysqlR2dbc" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+# Libraries can be bundled together for easier import
+springBootStarterReactorNetty = { group = "org.springframework.boot", name = "spring-boot-starter-reactor-netty" }
+springBootStarterJetty = { group = "org.springframework.boot", name = "spring-boot-starter-jetty" }
+kotlinxSerializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+[bundles]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+springframework-boot = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+dependency-management = { id = "io.spring.dependency-management", version.ref = "dependencyManagementVersion" }
+graalvm-native = { id = "org.graalvm.buildtools.native", version.ref = "graalvmVersion" }
