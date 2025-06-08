@@ -20,7 +20,7 @@ internal final class SchemaInitializer : ApplicationRunner {
         suspendTransactionAsync {
             logger.info("Starting application before sourceArgs: {}, nonOptionArgs: {}, optionNames: {}, thread: {}", args?.sourceArgs, args?.nonOptionArgs, args?.optionNames,
                 Thread.currentThread())
-            SchemaUtils.create(tables = arrayOf<Table>(UserEntity, CategoryEntity, ArticleEntity))
+            // SchemaUtils.create(tables = arrayOf<Table>(UserEntity, CategoryEntity, ArticleEntity))
             // SchemaUtils.createSchema()
             logger.info("Starting application after sourceArgs: {}, nonOptionArgs: {}, optionNames: {}, thread: {}", args?.sourceArgs, args?.nonOptionArgs, args?.optionNames,
                 Thread.currentThread())

@@ -1,10 +1,8 @@
 package edu.tyut.spring_boot_ssm.dao.impl
 
-import com.fasterxml.jackson.module.kotlin.KotlinBeanDeserializerModifier.updateBuilder
 import edu.tyut.spring_boot_ssm.bean.Category
 import edu.tyut.spring_boot_ssm.dao.CategoryDao
 import edu.tyut.spring_boot_ssm.dto.CategoryDto
-import edu.tyut.spring_boot_ssm.entity.ArticleEntity.id
 import edu.tyut.spring_boot_ssm.entity.CategoryEntity
 import edu.tyut.spring_boot_ssm.entity.UserEntity
 import kotlinx.coroutines.flow.firstOrNull
