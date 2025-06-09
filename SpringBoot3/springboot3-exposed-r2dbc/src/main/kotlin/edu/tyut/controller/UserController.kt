@@ -19,4 +19,13 @@ internal final class UserController internal constructor(
         logger.info("${Thread.currentThread()} found user with id: $id")
         return userService.findUserById(id = id).await()
     }
+    @GetMapping(value = ["/quickInsertUser"])
+    private final suspend fun quickInsertUser(): Boolean {
+        return userService.insetUser(user = User(
+            id = 0,
+            account = "admin",
+            password = "123456",
+            nickname = "admin"
+        )).await()
+    }
 }
