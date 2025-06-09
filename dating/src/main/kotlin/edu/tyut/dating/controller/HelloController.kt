@@ -19,12 +19,12 @@ import kotlin.random.Random
 
 @RestController(value = "HelloController")
 @RequestMapping(value = ["/hello"])
-internal class HelloController {
+private final class HelloController {
 
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
     @GetMapping(value = ["/hello"])
-    internal suspend fun hello(
+    private final suspend fun hello(
         @RequestHeader headers: Map<String, String>,
     ): String {
         logger.info("hello -> headers: $headers")
@@ -32,7 +32,7 @@ internal class HelloController {
     }
 
     @GetMapping(value = ["/success"], produces = [MediaType.APPLICATION_JSON_VALUE])
-    internal suspend fun success(
+    private final suspend fun success(
         @RequestHeader headers: Map<String, String>,
     ): Result<Boolean> {
         logger.info("success -> headers: $headers")
@@ -40,7 +40,7 @@ internal class HelloController {
     }
 
     @PostMapping(value = ["/person"])
-    internal suspend fun person(
+    private final suspend fun person(
         @RequestBody person: Person,
         @RequestHeader headers: Map<String, String>,
     ): Person {
