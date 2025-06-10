@@ -1,3 +1,6 @@
+# Purpose
+## Let more developers build high-performance web applications with Spring and Kotlin!
+
 # Modern backend development using Spring Boot Kotlin
 
 # Demo
