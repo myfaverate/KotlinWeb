@@ -19,11 +19,11 @@ import org.springframework.stereotype.Repository
 internal class ArticleDaoImpl internal constructor(): ArticleDao {
     override suspend fun add(articleDto: ArticleDto): Boolean {
         val id: UInt = ArticleEntity.insert { updateBuilder: UpdateBuilder<*> ->
-            updateBuilder[ArticleEntity.title] = articleDto.title
-            updateBuilder[ArticleEntity.content] = articleDto.content
-            updateBuilder[ArticleEntity.coverImg] = articleDto.coverImg
+            updateBuilder[ArticleEntity.title] = articleDto.title!!
+            updateBuilder[ArticleEntity.content] = articleDto.content!!
+            updateBuilder[ArticleEntity.coverImg] = articleDto.coverImg!!
             updateBuilder[ArticleEntity.state] = articleDto.state
-            updateBuilder[ArticleEntity.categoryId] = articleDto.categoryId
+            updateBuilder[ArticleEntity.categoryId] = articleDto.categoryId!!
             updateBuilder[ArticleEntity.createUser] = articleDto.createUser!!
             updateBuilder[ArticleEntity.createTime] = Clock.System.now().toLocalDateTime(
                 timeZone = TimeZone.of(zoneId = "Asia/Shanghai")

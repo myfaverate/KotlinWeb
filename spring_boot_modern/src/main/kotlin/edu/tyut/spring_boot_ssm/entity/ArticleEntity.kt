@@ -13,7 +13,7 @@ internal object ArticleEntity : UIntIdTable(name = "article") {
     internal val coverImg: Column<String> = varchar(name = "cover_img", length = 128)
     internal val state: Column<String> = varchar(name = "state", length = 3)
         .check { column: Column<String> ->
-            column inList listOf("草稿", "发布")
+            column inList listOf("Draft", "Publish")
         }
     internal val categoryId: Column<UInt> = uinteger(name = "category_id")
     internal val createUser: Column<UInt> = uinteger(name = "create_user")
