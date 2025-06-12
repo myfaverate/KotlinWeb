@@ -17,4 +17,13 @@ internal final class ArticleServiceImpl internal constructor (
         articleDao.add(articleDto = articleDto)
     }
 
+    override suspend fun list(
+        pageIndex: Int,
+        pageSize: Int,
+        categoryId: Int?,
+        state: String?
+    ): Deferred<List<Article>> = suspendTransactionAsync {
+        articleDao.list(pageIndex, pageSize = pageSize, categoryId = categoryId, state = state)
+    }
+
 }

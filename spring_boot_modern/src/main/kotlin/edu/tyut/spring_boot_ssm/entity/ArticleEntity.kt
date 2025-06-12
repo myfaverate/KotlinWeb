@@ -11,7 +11,7 @@ internal object ArticleEntity : UIntIdTable(name = "article") {
     internal val title: Column<String> = varchar(name = "title", length = 30)
     internal val content: Column<String> = varchar(name = "content", length = 10000)
     internal val coverImg: Column<String> = varchar(name = "cover_img", length = 128)
-    internal val state: Column<String> = varchar(name = "state", length = 3)
+    internal val state: Column<String> = varchar(name = "state", length = 10)
         .check { column: Column<String> ->
             column inList listOf("Draft", "Publish")
         }
