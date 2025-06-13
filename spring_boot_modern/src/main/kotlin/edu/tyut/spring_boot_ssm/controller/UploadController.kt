@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestPart
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
+import org.springframework.web.reactive.function.server.CoRouterFunctionDsl
+import org.springframework.web.reactive.function.server.HandlerFilterFunction
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
@@ -27,10 +29,9 @@ private final class UploadController {
         @RequestPart(value = "file")
         file: FilePart,
     ): Result<Boolean> = withContext(Dispatchers.IO) {
-        val uploadFile: File = Paths.get(Constants.UPLOAD_DIR, file.filename()).toFile()
-        val targetPath: Path = Files.createDirectories(uploadFile.parentFile.toPath())
+        val targetPath: Path = Files.createDirectories(Paths.get(Constants.UPLOAD_DIR))
         val targetFile: Path = targetPath.resolve(file.filename())
-        logger.info("thread: ${Thread.currentThread()}, fileName: ${file.filename()}, uploadFile: $uploadFile, targetPath: $targetPath, targetFile: $targetFile")
+        logger.info("thread: ${Thread.currentThread()}, fileName: ${file.filename()}, targetPath: $targetPath, targetFile: $targetFile")
         return@withContext try {
             file.transferTo(targetFile).awaitSingleOrNull()
             Result.success(message = "success", data = true)

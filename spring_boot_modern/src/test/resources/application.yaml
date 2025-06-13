@@ -2,7 +2,14 @@ spring:
   application:
     name:
       spring_boot_ssm
-
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/ssm
+    username: root
+    password: root
+  data:
+    redis:
+      host: localhost
+      port: 6379
   # Virtual threads are not working in netty
   threads:
     virtual:

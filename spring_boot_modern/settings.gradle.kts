@@ -8,9 +8,9 @@ pluginManagement {
 dependencyResolutionManagement {
     @Suppress("UnstableApiUsage")
     repositories {
-        maven { url = uri("https://maven.aliyun.com/repository/public/") }
-        maven { url = uri("https://maven.aliyun.com/repositories/google") }
-        maven { url = uri("https://maven.aliyun.com/repositories/central") }
+        maven { url = uri(path = "https://maven.aliyun.com/repository/public/") }
+        maven { url = uri(path = "https://maven.aliyun.com/repositories/google") }
+        maven { url = uri(path = "https://maven.aliyun.com/repositories/central") }
         google()
         mavenCentral()
     }

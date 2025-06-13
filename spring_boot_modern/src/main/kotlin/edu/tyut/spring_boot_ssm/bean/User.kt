@@ -1,6 +1,9 @@
 package edu.tyut.spring_boot_ssm.bean
 
+import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.databind.annotation.JsonSerialize
+import edu.tyut.spring_boot_ssm.serializer.KtxLocalDateTimeSerializer
 import jakarta.validation.constraints.Email
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Size
@@ -23,9 +26,13 @@ internal data class User internal constructor(
     @field:NotNull(message = "email must not be null")
     @field:Email(message = "email must be valid")
     internal val email: String = "",
+    @field:JsonSerialize(using = KtxLocalDateTimeSerializer::class)
+    @field:JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     internal val createTime: LocalDateTime = Clock.System.now().toLocalDateTime(
         timeZone = TimeZone.of(zoneId = "Asia/Shanghai")
     ),
+    @field:JsonSerialize(using = KtxLocalDateTimeSerializer::class)
+    @field:JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     internal val updateTime: LocalDateTime = Clock.System.now().toLocalDateTime(
         timeZone = TimeZone.of(zoneId = "Asia/Shanghai")
     ),

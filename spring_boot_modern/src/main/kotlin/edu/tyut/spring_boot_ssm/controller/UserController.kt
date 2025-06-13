@@ -14,6 +14,9 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.reactive.awaitFirstOrNull
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.data.redis.core.ReactiveStringRedisTemplate
+import org.springframework.data.redis.core.deleteAndAwait
+import org.springframework.data.redis.core.setAndAwait
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
 import org.springframework.util.MultiValueMap
@@ -25,11 +28,14 @@ import java.net.URL
 import java.util.Optional
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.coroutineContext
+import kotlin.time.Duration.Companion.hours
+import kotlin.time.toJavaDuration
 
 @RestController
 @RequestMapping(value = ["/user"])
 private final class UserController(
     private val userService: UserService,
+    private val redisTemplate: ReactiveStringRedisTemplate
 ) {
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
     @PostMapping(value = ["/register"], consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE])
@@ -56,7 +62,7 @@ private final class UserController(
     private final suspend fun login(
         @Valid @ModelAttribute userLoginDto: UserLoginDto
     ): Result<String> {
-        logger.info("Logining userLoginDto $userLoginDto")
+        logger.info("Logging userLoginDto $userLoginDto")
         val user: User = userService.findUserByUsername(username = userLoginDto.username!!).await()
         logger.info("User user : $user")
         if (user.id == 0U){
@@ -69,6 +75,8 @@ private final class UserController(
             )
             val token: String = JwtUtil.generateToken(claims = claims)
             logger.info("Token : $token, claims : $claims")
+            val isSuccess: Boolean = redisTemplate.opsForValue().setAndAwait(key = token, value = token, timeout = 12.hours.toJavaDuration())
+            logger.info("isSuccess : $isSuccess, thread: ${Thread.currentThread()}")
             return Result.success(message = "login success", data = token)
         }
         return Result.failure(message = "password error", data = "login failure")
@@ -106,6 +114,14 @@ private final class UserController(
         }
     }
 
+    /**
+     * kotlin.UInt
+     * TODO
+     * public static int kotlin.UInt.constructor-impl(int)
+     *
+     * without it being registered for runtime reflection. Add public static int kotlin.UInt.constructor-impl(int) to the reflection metadata to solve this problem. See https://www.graalvm.org/latest/reference-manual/native-image/metadata/#reflection for help.
+     *
+     */
     @PostMapping(value = ["/updateAvatar"])
     private final suspend fun updateAvatar(
         serverWebExchange: ServerWebExchange
@@ -130,7 +146,8 @@ private final class UserController(
 
     @PatchMapping(value = ["/updatePassword"])
     private final suspend fun updatePassword(
-        @Valid @RequestBody newPasswordDto: NewPasswordDto
+        @Valid @RequestBody newPasswordDto: NewPasswordDto,
+        @RequestHeader(value = HttpHeaders.AUTHORIZATION) token: String,
     ): Result<Boolean> {
         val oldPassword: String = newPasswordDto.oldPassword!!
         val newPassword: String = newPasswordDto.newPassword!!
@@ -154,6 +171,8 @@ private final class UserController(
             password = newPassword.md5()
         ).await()
         return if (isSuccess) {
+            val isSuccess: Boolean = redisTemplate.opsForValue().deleteAndAwait(key = token)
+            logger.info("delete token: $token, redisResult, $isSuccess")
             Result.success(message = "success", data = true)
         } else {
             Result.failure(message = "failure", data = false)

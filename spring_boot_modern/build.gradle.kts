@@ -13,6 +13,16 @@ repositories {
     mavenCentral()
 }
 
+graalvmNative {
+    binaries {
+        named("main") {
+            // TODO https://github.com/netty/netty/issues/15331
+            buildArgs.add("--initialize-at-run-time=sun.net.dns.ResolverConfigurationImpl")
+            buildArgs.add("-O2")
+        }
+    }
+}
+
 dependencies {
     implementation(libs.spring.boot.starter.webflux) {
         exclude(group = libs.springBootStarterReactorNetty.get().group, module = libs.springBootStarterReactorNetty.get().name)
@@ -31,10 +41,16 @@ dependencies {
     implementation(libs.r2dbcMysql)
     implementation(libs.springBootStarterDataR2dbc)
     implementation(libs.spring.boot.starter.thymeleaf)
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+
+    implementation(libs.kotlinxSerializationJson)
+    implementation(libs.springBootStarterDataRedisReactive)
 
     // TODO remove issue
     implementation("org.postgresql:r2dbc-postgresql:1.0.7.RELEASE")
+
+    // kotlin html
+    // Not very user-friendly
+    implementation(libs.kotlinxHtmlJvm)
 
     testImplementation (libs.kotlinxCoroutinesTest)
     testImplementation(libs.spring.boot.starter.test)

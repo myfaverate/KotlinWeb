@@ -6,32 +6,44 @@ import edu.tyut.spring_boot_ssm.jwt.JwtUtil
 import kotlinx.coroutines.withContext
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.data.redis.core.ReactiveStringRedisTemplate
+import org.springframework.data.redis.core.getAndAwait
 import org.springframework.http.HttpHeaders
 import org.springframework.stereotype.Component
 import org.springframework.web.server.CoWebFilter
 import org.springframework.web.server.CoWebFilterChain
 import org.springframework.web.server.ServerWebExchange
+import org.springframework.web.util.pattern.PathPattern
+import org.springframework.web.util.pattern.PathPatternParser
 
 // CoWebExceptionHandler
 @Component
-internal final class LoginInterceptor(
-    private val objectMapper: ObjectMapper,
+internal final class LoginInterceptor internal constructor(
+    private val redisTemplate: ReactiveStringRedisTemplate
 ) : CoWebFilter() {
 
     private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
-
 
     override suspend fun filter(
         exchange: ServerWebExchange,
         chain: CoWebFilterChain
     ) {
-        val excludePaths: Set<String> = setOf("/user/register", "/user/login")
-        if (excludePaths.any { path: String ->
-            exchange.request.path.toString().startsWith(prefix = path)
+        val excludePaths: List<PathPattern> = listOf(
+            PathPatternParser.defaultInstance.parse("/user/register"),
+            PathPatternParser.defaultInstance.parse("/user/login"),
+            PathPatternParser.defaultInstance.parse("/html/*"),
+            PathPatternParser.defaultInstance.parse("/favicon.ico"),
+            PathPatternParser.defaultInstance.parse("/.well-known/**"),
+        )
+        if (excludePaths.any { pathPattern: PathPattern ->
+                pathPattern.matches(exchange.request.path.pathWithinApplication())
         }){
             chain.filter(exchange = exchange)
             return
         }
+
+        logger.info("path: ${exchange.request.path}")
+
         val token: String = exchange.request.headers.getFirst(HttpHeaders.AUTHORIZATION)
             ?: ""
 
@@ -47,6 +59,11 @@ internal final class LoginInterceptor(
             //     writeWith(Mono.just<DataBuffer>(buffer)).awaitSingleOrNull()
             // }.setComplete().awaitSingleOrNull()
             // return
+        }
+
+        val redisToken: String? = redisTemplate.opsForValue().getAndAwait(key = token)
+        if (redisToken.isNullOrEmpty()){
+            throw IllegalArgumentException("token is invalid")
         }
 
         val claims: Map<String, Any> = JwtUtil.parseToken(token = token)

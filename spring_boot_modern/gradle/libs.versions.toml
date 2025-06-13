@@ -13,6 +13,7 @@ exposed = "1.0.0-beta-2"
 mysqlR2dbc = "1.4.1"
 kotlinxDatetime = "0.6.2"
 kotlinxSerializationJson = "1.8.1"
+kotlinHtml = "0.12.0"
 [libraries]
 kotlinxCoroutinesReactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinxCoroutines"  }
 kotlinxCoroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
@@ -35,6 +36,9 @@ kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.r
 springBootStarterReactorNetty = { group = "org.springframework.boot", name = "spring-boot-starter-reactor-netty" }
 springBootStarterJetty = { group = "org.springframework.boot", name = "spring-boot-starter-jetty" }
 kotlinxSerializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+springBootStarterDataRedisReactive = { group = "org.springframework.boot", name = "spring-boot-starter-data-redis-reactive" }
+kotlinxHtmlJvm = { group = "org.jetbrains.kotlinx", name = "kotlinx-html-jvm", version.ref = "kotlinHtml" }
+
 [bundles]
 
 [plugins]
