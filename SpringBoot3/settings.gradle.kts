@@ -23,5 +23,6 @@ include(":app")
 include(":utils")
 include(":springboot3-exposed-r2dbc")
 include(":springboot3-custom-starter")
+include("springboot3-webflux-function")
 
 rootProject.name = "SpringBoot3"
