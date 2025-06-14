@@ -3,7 +3,6 @@ spring:
     name:
       spring_boot_ssm
 
-
   # Virtual threads are not working in netty
   threads:
     virtual:
@@ -20,8 +19,6 @@ spring:
     redis:
       host: localhost
       port: 6379
-  profiles:
-    active: dev
 
 
 

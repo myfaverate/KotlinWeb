@@ -42,11 +42,15 @@ private final class HtmlController {
                     }
                 }
                 style {
-                    +"""
-                        .p{
-                            color: red
-                        }
-                    """.trimIndent()
+                    unsafe {
+                        raw(
+                            s = """
+                                .p{
+                                    color: red
+                                }
+                                """.trimIndent()
+                        )
+                    }
                 }
             }
             body {

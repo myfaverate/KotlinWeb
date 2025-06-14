@@ -34,6 +34,7 @@ internal final class LoginInterceptor internal constructor(
             PathPatternParser.defaultInstance.parse("/html/*"),
             PathPatternParser.defaultInstance.parse("/favicon.ico"),
             PathPatternParser.defaultInstance.parse("/.well-known/**"),
+            PathPatternParser.defaultInstance.parse("/image/**"),
         )
         if (excludePaths.any { pathPattern: PathPattern ->
                 pathPattern.matches(exchange.request.path.pathWithinApplication())

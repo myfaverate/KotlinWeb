@@ -58,6 +58,16 @@ dependencies {
     testRuntimeOnly(libs.junit.platform.launcher)
 }
 
+
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootBuildImage>("bootBuildImage") {
+    environment.putAll(mapOf(
+        "JAVA_TOOL_OPTIONS" to "-XX:+UseZGC",
+        "BP_SPRING_AOT_ENABLED" to "true",
+        "BP_JVM_CDS_ENABLED" to "true",
+    ))
+    logger.warn("env: ${environment.get()}")
+}
+
 kotlin {
     jvmToolchain(jdkVersion = 21)
     compilerOptions {
